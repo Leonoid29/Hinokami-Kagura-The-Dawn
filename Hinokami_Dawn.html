@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hinokami Kagura: The Dawn</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="logo-wrap">
+  <a href="https://demonslayer-anime.com/" target="_blank">
+    <img src="https://cdn.prod.website-files.com/62091a8c8bac4e5727559c42/620c6987f6c690fb47d6e60b_Webclip.png" alt="logo">
+  </a>
+</div>
+
+
+<div id="breathingFX"></div>
+
+<div class="summary_text"></div>
+
+
+<div class="modal-overlay" id="modal">
+  <div class="modal-box">
+
+    <div class="modal-header">
+      <div class="modal-title" id="modalTitle"></div>
+    </div>
+
+    <div class="modal-body">
+      <div class="modal-text" id="modalText"></div>
+    </div>
+
+    <button class="modal-close" onclick="closeModal()">Close</button>
+
+  </div>
+</div>
+
+<button id="pixelBattleBtn" class="pixel-battle-btn">
+  🎮 Pixel Battle
+</button>
+
+<div id="pixelArena" class="pixel-arena">
+
+  <div class="pixel-bg">
+    <div class="cloud" style="top:60px;"></div>
+    <div class="cloud" style="top:120px; animation-duration:30s;"></div>
+    <div class="cloud" style="top:90px; animation-duration:25s;"></div>
+  </div>
+
+  <div class="pixel-ui">
+    <select id="pixelCharA"></select>
+    <select id="pixelCharB"></select>
+    <button onclick="spawnPixelChars()">Fight</button>
+    <button onclick="closePixelArena()">Exit</button>
+  </div>
+
+</div>
+
+
+<div class="char-orb-button" id="charOrb" onclick="toggleCharCompare()">🗡️</div>
+
+<div class="compare-widget" id="charCompareWidget">
+
+  <div class="compare-header">
+    🗡️ Character Compare
+    <span class="close-btn" onclick="toggleCharCompare()">✖</span>
+  </div>
+
+  <select id="charA"></select>
+
+  <span class="vs">VS</span>
+
+  <select id="charB"></select>
+
+  <button onclick="compareCharacters()">Compare</button>
+
+  <div class="compare-result" id="charResult">Select characters ⚔️</div>
+
+</div>
+
+
+<div class="orb-button" id="orbButton" onclick="toggleCompare()">⚔️</div>
+
+<div class="compare-widget" id="compareWidget">
+
+  <div class="compare-header">
+    ⚔️ Breathing Compare
+    <span class="close-btn" onclick="toggleCompare()">✖</span>
+  </div>
+
+  <select id="styleA">
+    <option>Water</option>
+    <option>Fire</option>
+    <option>Thunder</option>
+    <option>Beast</option>
+    <option>Love</option>
+    <option>Insect</option>
+    <option>Wind</option>
+    <option>Stone</option>
+    <option>Serpent</option>
+    <option>Sound</option>
+    <option>HinokamiKagura</option>
+    <option>Moon</option>
+    <option>Galaxy</option>
+  </select>
+
+  <span class="vs">VS</span>
+
+  <select id="styleB">
+    <option>Fire</option>
+    <option>Water</option>
+    <option>Thunder</option>
+    <option>Beast</option>
+    <option>Love</option>
+    <option>Insect</option>
+    <option>Wind</option>
+    <option>Stone</option>
+    <option>Serpent</option>
+    <option>Sound</option>
+    <option>HinokamiKagura</option>
+    <option>Moon</option>
+    <option>Galaxy</option>
+  </select>
+
+  <button onclick="compareStyles()">Compare</button>
+
+  <div class="compare-result" id="compareResult">Select styles ⚔️</div>
+
+</div>
+
+
+<a href="https://demonslayermangaa.com/" target="_blank" class="manga-orb">
+  📖
+</a>
+
+
+<div class="page">
+
+  <div class="spark-layer"></div>
+
+ 
+  <div class="lantern-wrap left">
+    <div class="lantern big"></div>
+    <div class="lantern medium"></div>
+    <div class="lantern small"></div>
+  </div>
+
+  <div class="lantern-wrap right">
+    <div class="lantern big"></div>
+    <div class="lantern medium"></div>
+    <div class="lantern small"></div>
+  </div>
+
+  
+  <section class="hero">
+    <h1 class="main-title">Hinokami Kagura</h1>
+    <h2 class="sub-title">The Dawn</h2>
+
+    <div class="subtitle_wrapper">
+      <div class="subtitle_line"></div>
+    </div>
+  </section>
+
+  
+  <section class="summary_section">
+
+    <div class="summary_header_wrapper">
+      <div class="summary_line"></div>
+
+      <h1 class="summary_header">
+        <span class="bright_part">Sum</span><span class="fade_part">mary</span>
+      </h1>
+
+      <div class="summary_line"></div>
+    </div>
+
+    <div class="summary_text">
+      <p>
+        Tanjiro Kamado, a kind-hearted boy living in the mountains with his family, wakes up one morning to take coal to sell in the nearby town, leaving his home under the watch of his mother and siblings, but when he returns after spending the night at a neighbor’s house, he finds his family brutally slaughtered by a demon, with only his sister Nezuko alive—but she’s been transformed into a demon, her body tiny and fragile yet strangely human; devastated and determined, Tanjiro sets off on a perilous journey to find a cure, meeting the stoic Water Hashira-in-training Urokodaki, who trains him rigorously in Water Breathing, honing his sword skills, speed, and stamina while Tanjiro struggles to control his compassion toward demons he faces; after passing the grueling Final Selection, he encounters his first real challenge on Mount Natagumo, battling the terrifying Spider Demon family alongside allies like the cowardly but lightning-fast Zenitsu and the wild, instinct-driven Inosuke, learning teamwork, strategy, and the horrifying truth about the Twelve Kizuki; from there, Tanjiro and his friends descend into the Entertainment District, facing Upper Moon Six; later the Swordsmith Village, the loss of Rengoku, and finally the Infinity Castle where Muzan is defeated and Nezuko regains her humanity.
+  
+      </p>
+    </div>
+
+  </section>
+
+ 
+  <section class="character-section">
+    <h2 class="character-header">Protagonists</h2>
+
+    <div class="character-grid">
+
+      <div class="character-card">
+        <img src="https://cdn.prod.website-files.com/6215709a2879ceb5988bb02e/622427b748fd5d9a034e3f5b_Tanjiro.png">
+        <h3>Tanjiro</h3>
+        <div class="gradient-bg"></div>
+      </div>
+
+      <div class="character-card">
+        <img src="https://cdn.prod.website-files.com/6215709a2879ceb5988bb02e/621bc678af1a1a0626de6680_Nezuko.png">
+        <h3>Nezuko</h3>
+        <div class="gradient-bg"></div>
+      </div>
+
+      <div class="character-card">
+        <img src="https://cdn.prod.website-files.com/6215709a2879ceb5988bb02e/621beffb64ee353ee4675bb9_Zenitsu.png">
+        <h3>Zenitsu</h3>
+        <div class="gradient-bg"></div>
+      </div>
+
+      <div class="character-card">
+        <img src="https://cdn.prod.website-files.com/6215709a2879ceb5988bb02e/621bc62259ea7b55d32d2a8f_Inosuke.png">
+        <h3>Inosuke</h3>
+        <div class="gradient-bg"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HASHIRAS -->
+  <section class="character-section">
+    <h2 class="character-header">Hashiras</h2>
+    <div class="character-grid">
+      <div class="character-card">
+      <img src="https://cdn.prod.website-files.com/6215709a2879ceb5988bb02e/621b84301126b63588f245ce_Rengoku.png" alt="Rengoku">
+      <h3>Rengoku</h3>
+      <div class="gradient-bg" style="background:linear-gradient(180deg,#eb6024,#ffb951);"></div>
+    </div>
+    <div class="character-card">
+      <img src="https://cdn.prod.website-files.com/6215709a2879ceb5988bb02e/621b8499e190fa77dd02ed3d_Tomioka.png" alt="Tomioka">
+      <h3>Tomioka</h3>
+      <div class="gradient-bg" style="background:linear-gradient(180deg,#09c5ff,#041b5f);"></div>
+    </div>
+    <div class="character-card">
+      <img src="https://cdn.prod.website-files.com/6215709a2879ceb5988bb02e/621b84d91a15cc5c7753a1e5_Sanemi.png" alt="Sanemi">
+      <h3>Sanemi</h3>
+      <div class="gradient-bg" style="background:linear-gradient(180deg,#10c684,#213934);"></div>
+    </div>
+    <div class="character-card">
+      <img src="https://cdn.prod.website-files.com/6215709a2879ceb5988bb02e/621b85d0abdb7b087bbd6dd8_Himejima.png" alt="Himejima">
+      <h3>Himejima</h3>
+      <div class="gradient-bg" style="background:linear-gradient(180deg,#c7bc2e,#1c1c1c);"></div>
+    </div>
+    <div class="character-card">
+      <img src="https://cdn.prod.website-files.com/6215709a2879ceb5988bb02e/621b867b5857fc2e8df3c1fe_Iguro.png" alt="Iguro">
+      <h3>Iguro</h3>
+      <div class="gradient-bg" style="background:linear-gradient(180deg,#256178,#0d2933);"></div>
+    </div>
+    <div class="character-card">
+      <img src="https://cdn.prod.website-files.com/6215709a2879ceb5988bb02e/621b86e273cac952dfb20cf6_Shinobu.png" alt="Shinobu">
+      <h3>Shinobu</h3>
+      <div class="gradient-bg" style="background:linear-gradient(180deg,#8a57ff,#ff6dc5);"></div>
+    </div>
+    <div class="character-card">
+      <img src="https://cdn.prod.website-files.com/6215709a2879ceb5988bb02e/621b87383c1f287bf5ff86ae_Tengen%20Uzui.png" alt="Uzui">
+      <h3>Uzui</h3>
+      <div class="gradient-bg" style="background:linear-gradient(180deg,#ffdc58,#cc9600);"></div>
+    </div>
+    <div class="character-card">
+      <img src="https://cdn.prod.website-files.com/6215709a2879ceb5988bb02e/621b87a722af26117bba1489_Kanroji.png" alt="Kanroji">
+      <h3>Kanroji</h3>
+      <div class="gradient-bg" style="background:linear-gradient(180deg,#f86ba4,#ff4e95);"></div>
+    </div>
+    <div class="character-card">
+      <img src="https://cdn.prod.website-files.com/6215709a2879ceb5988bb02e/621b892153d9ed67761bcdf6_Muichiro%20Tokito.png" alt="Tokito">
+      <h3>Tokito</h3>
+      <div class="gradient-bg" style="background:linear-gradient(180deg,#65fff0,#0a252b);"></div>
+    </div>
+    </div>
+  </section>
+
+  <!-- UPPER MOONS -->
+  <section class="character-section">
+    <h2 class="character-header">Upper Moons</h2>
+    <div class="character-grid">
+      <div class="character-card">
+      <img src="https://cdn.prod.website-files.com/6215709a2879ceb5988bb02e/621bcba64c58054353ae65a3_Kokushibo.png" alt="Kokushibo">
+      <h3>Kokushibo</h3>
+      <div class="gradient-bg" style="background:linear-gradient(180deg,#60008e,#29003d);"></div>
+    </div>
+    <div class="character-card">
+      <img src="https://cdn.prod.website-files.com/6215709a2879ceb5988bb02e/621bd02f7f76fb3e65d794f2_Doma.png" alt="Doma">
+      <h3>Doma</h3>
+      <div class="gradient-bg" style="background:linear-gradient(180deg,#d70000,#601e20);"></div>
+    </div>
+    <div class="character-card">
+      <img src="https://cdn.prod.website-files.com/6215709a2879ceb5988bb02e/6216f979986f62433e908d1c_Akaza.png" alt="Akaza">
+      <h3>Akaza</h3>
+      <div class="gradient-bg" style="background:linear-gradient(180deg,#ce3dc2,#080e2b);"></div>
+    </div>
+    <div class="character-card">
+      <img src="https://cdn.prod.website-files.com/6215709a2879ceb5988bb02e/621eca4555e2c416ea1578db_Hantengu.png" alt="Hantengu">
+      <h3>Hantengu</h3>
+      <div class="gradient-bg" style="background:linear-gradient(180deg,#bfa055,#856c58);"></div>
+    </div>
+    <div class="character-card">
+      <img src="https://cdn.prod.website-files.com/6215709a2879ceb5988bb02e/621bce7db18d194ddec3452b_Daki.png" alt="Daki">
+      <h3>Daki</h3>
+      <div class="gradient-bg" style="background:linear-gradient(180deg,#ff7f7f,#aa0000);"></div>
+    </div>
+    <div class="character-card">
+      <img src="https://cdn.prod.website-files.com/6215709a2879ceb5988bb02e/6216f62f36a3938e8f3aa535_Gyutaro.png" alt="Gyutaro">
+      <h3>Gyutaro</h3>
+      <div class="gradient-bg" style="background:linear-gradient(180deg,#8b0000,#440000);"></div>
+    </div>
+    <div class="character-card">
+      <img src="https://cdn.prod.website-files.com/6215709a2879ceb5988bb02e/621bcd834bf03534fffd7d99_Gyokko.png" alt="Gyokko">
+      <h3>Gyokko</h3>
+      <div class="gradient-bg" style="background:linear-gradient(180deg,#0077aa,#003344);"></div>
+    </div>
+    <div class="character-card big-moon">
+      <img src="https://cdn.prod.website-files.com/6215709a2879ceb5988bb02e/621bc7777098dc607b59aac2_Muzan.png" alt="Muzan">
+      <h3>Muzan</h3>
+      <div class="gradient-bg" style="background:linear-gradient(180deg,#ff0000,#4b0000);"></div>
+    </div>
+    </div>
+  </section>
+
+  
+  <footer class="footer">
+    <div class="credits-bar">
+      <p>The Dawn Has Been Won So Enjoy Some Music</p>
+      <p>Hand Crafted by Leonoid © 2026</p>
+    </div>
+  </footer>
+
+</div>
+
+
+<div class="main_banner js-trigger">
+  <div class="main_banner__inner">
+    <div class="main_banner__spotify">
+      <iframe
+        style="border-radius:12px"
+        src="https://open.spotify.com/embed/playlist/37i9dQZF1DX48OvCv93avz?utm_source=generator"
+        width="100%"
+        height="352"
+        frameborder="0"
+        allowfullscreen
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+      </iframe>
+    </div>
+  </div>
+</div>
+
+
+<a href="https://www.youtube.com/@Yorrichi29" target="_blank" class="subscribe-btn">
+  Subscribe
+</a>
+
+
+<button id="breathingBtn">
+    📜 Encyclopedia
+</button>
+
+
+
+<div id="breathingArchive">
+
+    <div class="archive-sidebar">
+
+        <div class="archive-title">
+            BREATHING ARCHIVE
+        </div>
+
+        <div id="styleButtons"></div>
+
+    </div>
+
+
+    <div class="archive-content">
+
+        <button id="closeArchive">✕</button>
+
+        <h1 id="styleName">
+            Select A Style
+        </h1>
+
+        <div id="styleInfo">
+
+            Choose a breathing style from the sidebar.
+
+        </div>
+
+    </div>
+
+</div>
+
+<a href="https://animotvslash.org/demon-slayer-infinity-castle-2025-web-dl-in-japanese-esub-1080p-kimetsu-no-yaiba-the-movie-infinity-castle-full-movie/"
+   target="_blank"
+   class="movie-btn">
+   🎥 Movie
+</a>
+
+
+<button id="timelineBtn" class="timeline-btn" onclick="toggleTimelineStudio()">
+  ⏳Studio
+</button>
+
+<div id="timelineStudioModal" class="timeline-studio-overlay">
+  <div class="studio-card">
+    
+    <div class="studio-header">
+      <div class="header-title-group">
+        <h3>⏳ Infinity Flow Studio</h3>
+        <p>Drag blocks onto the grid, connect vector points, and chart your own timeline destiny</p>
+      </div>
+      <div class="header-actions">
+        <button class="clear-canvas-btn" onclick="clearTimelineWorkspace()">🧹 Reset Grid</button>
+        <span class="studio-close-btn" onclick="toggleTimelineStudio()">✕</span>
+      </div>
+    </div>
+    
+    <div class="studio-main-layout">
+      
+      <div class="node-toolbox">
+        <div class="toolbox-search">
+          <input type="text" id="characterFilter" placeholder="Filter by character name..." oninput="filterToolboxBlocks()">
+        </div>
+        
+        <div class="category-accordion">
+          <div class="category-group">
+            <button class="category-header" onclick="toggleCategory('catTrain')">⚔️ Training Nodes</button>
+            <div id="catTrain" class="category-content active"></div>
+          </div>
+
+          <div class="category-group">
+            <button class="category-header" onclick="toggleCategory('catFight')">💥 Battle Nodes</button>
+            <div id="catFight" class="category-content"></div>
+          </div>
+
+          <div class="category-group">
+            <button class="category-header" onclick="toggleCategory('catInjury')">🩸 Injury Nodes</button>
+            <div id="catInjury" class="category-content"></div>
+          </div>
+
+          <div class="category-group">
+            <button class="category-header" onclick="toggleCategory('catSurvival')">🛡️ Survival Nodes</button>
+            <div id="catSurvival" class="category-content"></div>
+          </div>
+
+          <div class="category-group">
+            <button class="category-header" onclick="toggleCategory('catDeath')">💀 Death Nodes</button>
+            <div id="catDeath" class="category-content"></div>
+          </div>
+
+          <div class="category-group">
+            <button class="category-header" onclick="toggleCategory('catClimax')">🌌 Climax Nodes</button>
+            <div id="catClimax" class="category-content"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="canvasContainer" class="canvas-container">
+        <svg id="vectorLinkLayer"></svg>
+        <div id="sandboxCanvas" class="sandbox-canvas">
+        </div>
+      </div>
+    </div>
+
+    <div id="narrativeDrawer" class="narrative-drawer">
+      <div class="drawer-header" onclick="toggleNarrativeDrawer()">
+        <span class="drawer-title">📜 Chronology Summary Interpreter</span>
+        <span id="drawerArrow" class="drawer-arrow">▲</span>
+      </div>
+      <div id="drawerBody" class="drawer-body">
+        <p class="empty-narrative-msg">No connections mapped. Wire nodes together using the [＝] joints to generate your live timeline script...</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<div class="right-side-nav-container">
+  
+  <button id="dsFeaturesMasterBtn" class="hub-floating-btn" onclick="toggleFeaturesHub(true)">
+    🏯Hub
+</button>
+
+
+</div>
+
+<div id="dsFeaturesOverlayPanel" class="ds-hub-overlay-shield">
+  <div class="ds-hub-blur-backdrop" onclick="toggleFeaturesHub(false)"></div>
+  
+  <div class="ds-hub-window-frame">
+    <div class="ds-hub-sidebar">
+      <div class="sidebar-branding">
+        <h3>Taisho Engine</h3>
+        <p>v2.4 Core Modules</p>
+      </div>
+      <nav class="sidebar-menu-grid">
+        <button type="button" class="sidebar-tab-btn active" onclick="switchHubFeatureTab('mapMakerView', this)">🗺️ Taisho Map Maker</button>
+        <button type="button" class="sidebar-tab-btn" onclick="switchHubFeatureTab('breathingCodexView', this)">📜 Breathing Codex</button>
+        <button type="button" class="sidebar-tab-btn" onclick="switchHubFeatureTab('missionBoardView', this)">🦅 Kasugai Mission Board</button>
+      </nav>
+      <button type="button" class="sidebar-exit-btn" onclick="toggleFeaturesHub(false)">✕ Close Hub</button>
+    </div>
+
+    <div class="ds-hub-content-viewport">
+      
+      <div id="mapMakerView" class="hub-feature-panel-view active">
+        <div class="feature-view-header">
+          <div>
+            <h2>2D Taisho World Map Maker</h2>
+            <p>Paint terrain zones, track corps strongholds, and export custom map hash arrays.</p>
+          </div>
+          <div class="header-actions-row">
+            <button type="button" class="map-util-btn btn-clear" onclick="clearActiveMapCanvasGrid()">🧹 Reset Grid</button>
+            <button type="button" class="map-util-btn btn-save" onclick="serializeAndSaveMapLayout()">💾 Save Layout</button>
+          </div>
+        </div>
+
+        <div class="map-maker-workspace-layout">
+          <div class="map-paint-palette-sidebar">
+            <h4>Select Terrain Brush</h4>
+            <div class="palette-brush-options-stack">
+              <button type="button" class="palette-brush-node active" data-brush-type="forest" onclick="setActivePaintingBrush('forest', this)">
+                <span class="brush-emoji">🌲</span> <div class="brush-meta"><b>Dense Forest</b><span>Demon spawning zone</span></div>
+              </button>
+              <button type="button" class="palette-brush-node" data-brush-type="river" onclick="setActivePaintingBrush('river', this)">
+                <span class="brush-emoji">🌊</span> <div class="brush-meta"><b>Winding River</b><span>Natural water boundary</span></div>
+              </button>
+              <button type="button" class="palette-brush-node" data-brush-type="mountain" onclick="setActivePaintingBrush('mountain', this)">
+                <span class="brush-emoji">⛰️</span> <div class="brush-meta"><b>Slayer Mountains</b><span>High-altitude terrain</span></div>
+              </button>
+              <button type="button" class="palette-brush-node" data-brush-type="city" onclick="setActivePaintingBrush('city', this)">
+                <span class="brush-emoji">🏮</span> <div class="brush-meta"><b>Asakusa City</b><span>Populated urban center</span></div>
+              </button>
+              <button type="button" class="palette-brush-node" data-brush-type="hq" onclick="setActivePaintingBrush('hq', this)">
+                <span class="brush-emoji">⚔️</span> <div class="brush-meta"><b>Slayer HQ</b><span>Hidden core headquarters</span></div>
+              </button>
+            </div>
+            
+            <div class="map-analytics-card-node">
+              <h5>Map Deployment Assessment</h5>
+              <div class="analytics-stat-line"><span>Grid Capacity:</span> <b>256 Tiles (16×16)</b></div>
+              <div class="analytics-stat-line"><span>Threat Index:</span> <b id="mapThreatIndexDisplay" style="color: #2ecc71;">LOW HAZARD</b></div>
+            </div>
+          </div>
+
+          <div class="map-grid-scrollbox-wrapper">
+            <div id="taishoInteractiveGridCanvas" class="taisho-mapping-grid-16x16"></div>
+          </div>
+        </div>
+      </div>
+
+    <div id="breathingCodexView" class="hub-feature-panel-view">
+  <div class="feature-view-header">
+    <div>
+      <h2>Breathing Styles Codex</h2>
+      <p>Select a corporate style branch and activate forms to initialize technical kata visuals.</p>
+    </div>
+  </div>
+
+  <div class="breathing-codex-workspace">
+    <div class="codex-styles-sidebar">
+      <div class="style-selector-card active" data-style="sun">
+        <div class="style-icon-frame">☀️</div>
+        <div class="style-meta-info"><b>Sun Breathing</b><span>Hinokami Kagura</span></div>
+      </div>
+      <div class="style-selector-card" data-style="water">
+        <div class="style-icon-frame">🌊</div>
+        <div class="style-meta-info"><b>Water Breathing</b><span>Mizu no Kokyu</span></div>
+      </div>
+      <div class="style-selector-card" data-style="fire">
+        <div class="style-icon-frame">🔥</div>
+        <div class="style-meta-info"><b>Flame Breathing</b><span>Honō no Kokyu</span></div>
+      </div>
+      <div class="style-selector-card" data-style="thunder">
+        <div class="style-icon-frame">⚡</div>
+        <div class="style-meta-info"><b>Thunder Breathing</b><span>Kaminari no Kokyu</span></div>
+      </div>
+      <div class="style-selector-card" data-style="wind">
+        <div class="style-icon-frame">🌪️</div>
+        <div class="style-meta-info"><b>Wind Breathing</b><span>Kaze no Kokyu</span></div>
+      </div>
+    </div>
+
+    <div class="codex-forms-viewport">
+      <div class="forms-execution-deck">
+        <div class="form-selection-node active">
+          <span class="form-number-tag">First Form</span>
+          <span class="form-title-text">Unknowing Fire</span>
+          <span class="form-desc-text">A high-speed charging strike that decapitates targets in a flash.</span>
+        </div>
+      </div>
+
+      <div class="breathing-animation-theater">
+        <div class="theater-placeholder-message">Select a form above to view live matrix animation execution...</div>
+        <div class="theater-hud-overlay">
+          <h4>Active Technique Output</h4>
+          <p id="codexActiveFormDisplay">Flame Breathing: First Form</p>
+        </div>
+        <canvas class="theater-canvas-target" id="codexAnimationCanvas"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
+
+       
+ <div id="missionBoardView" class="hub-feature-panel-view">
+  <div class="feature-view-header">
+    <div>
+      <h2>Kasugai Crow Dispatch</h2>
+      <p>Live alert terminal tracking auxiliary sector deployments.</p>
+    </div>
+  </div>
+  
+  <div class="kasugai-mission-box">
+    <h3 class="mission-header-title">Kasugai Crow Communication</h3>
+    
+    <div class="mission-theater">
+      <div id="crowEmbedContainer" class="crow-embed-hide">
+        <div class="tenor-gif-embed" data-postid="26571101" data-share-method="host" data-aspect-ratio="1.77222" data-width="100%">
+          <a href="https://tenor.com/view/kasugai-gif-26571101">Kasugai GIF</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mission-controls-row">
+      <button id="summonCrowBtn" class="mission-trigger-btn">Request Next Mission</button>
+      <button id="closeMissionBtn" class="mission-close-btn">Close Terminal</button>
+    </div>
+    
+    <div id="missionTextOutput" class="mission-text-box"></div>
+  </div>
+</div>
+
+
+
+
+
+        
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
